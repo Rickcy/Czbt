@@ -14,7 +14,7 @@
             <div class="footer-top_wrapper">
                 <div class="footer-top__social">
                     <?= \skeeks\cms\cmsWidgets\text\TextCmsWidget::widget([
-                        'namespace'         => 'text-footer-left',
+                        'namespace'         => 'text-footer-links',
                         'text'              => <<<HTML
 					  <a href="#" target="_blank" title="Мы в VK" class="social__vk">http://vk.com/url</a><br>
                     <a href="#" target="_blank" title="Мы в Instagram" class="social__inst">http://instagram.com/url</a><br>
@@ -33,7 +33,7 @@ HTML
                 <div class="footer-top__phone">
                     <div class="icon"></div>
                     <?= \skeeks\cms\cmsWidgets\text\TextCmsWidget::widget([
-                        'namespace'         => 'text-footer-left',
+                        'namespace'         => 'text-footer-calls',
                         'text'              => <<<HTML
 					 
                     <div class="text">
