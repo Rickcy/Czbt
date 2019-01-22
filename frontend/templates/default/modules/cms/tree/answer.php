@@ -18,3 +18,13 @@
         ]); ?>
     </div>
 </div>
+<div class="feedback">
+    <div class="container">
+        <div class="h__center">Задайте свой вопрос</div>
+    <?= \skeeks\modules\cms\form2\cmsWidgets\form2\FormWidget::widget([
+        'form_code' => 'feedback',
+         'viewFile' 	=> '@app/views/widgets/FormCmsWidget/feedback',
+    ]); ?>
+    </div>
+</div>
+
