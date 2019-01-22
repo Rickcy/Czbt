@@ -28,7 +28,10 @@
                         </div>
                     </div>
                     <div class="header-top__callback">
-                        <a href="#">Заказать обратный звонок</a>
+                        <a id="fca_phone_div" href="#callback" class="fca-phone fca-green fca-show fca-static sx-fancybox" style="right: 50px; bottom: 100px; display: block;">
+                            Заказать обратный звонок
+                        </a>
+
                     </div>
                 </div>
                 <div class="header-top-wrapper__sm">
