@@ -28,14 +28,14 @@ if ($widget->dataProvider->query->count() >= 1)
     \Yii::$app->assetManager->appendTimestamp = $timestamp;
     $this->registerJs(<<<JS
         jQuery("#layerslider").layerSlider({
-            pauseOnHover: true,
+            pauseOnHover: false,
             autoPlayVideos: false,
             skinsPath: '{$skinsPath}',
             responsive: false,
             responsiveUnder: 1280,
             layersContainer: 1280,
             skin: 'borderlessdark3d',
-            hoverPrevNext: true,
+            hoverPrevNext: false,
         });
 JS
     );
