@@ -10,7 +10,8 @@
 /* @var \skeeks\cms\models\Tree $model */
 
 ?>
-<div class="news">
+<div class="news content-cols__content content-cols__content-contacts">
+    <h1><?= $model->name; ?></h1>
     <div class="container">
         <?= \skeeks\cms\cmsWidgets\contentElements\ContentElementsCmsWidget::widget([
             'namespace' => 'ContentElementsCmsWidget-news',

@@ -11,7 +11,16 @@
 ?>
 <div class="container">
     <section class="content-cols">
-
+        <aside class="content-cols__menu">
+        <?= \skeeks\cms\cmsWidgets\treeMenu\TreeMenuCmsWidget::widget([
+            'namespace'      => 'menu-left',
+            'viewFile'       => '@app/views/widgets/TreeMenuCmsWidget/left-menu-services.php',
+                'tree_type_ids'          => [$model->id],
+            'level'          => '1',
+            'with'          => ['cmsContentElements'],
+            'enabledRunCache'=> \skeeks\cms\components\Cms::BOOL_N,
+        ]); ?>
+        </aside>
         <section class="content-cols__content">
             <h1><?= $model->description_full; ?></h1>
             <?= \skeeks\cms\cmsWidgets\contentElements\ContentElementsCmsWidget::widget([
