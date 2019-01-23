@@ -36,19 +36,20 @@
         <? \skeeks\cms\modules\admin\widgets\Pjax::end(); ?>
     <? endif; ?>
 </div>
+
 <div class="services-wrapper__sm">
     <div class="line">
         <? if ($widget->label) : ?>
-            <div class="h__center"><?=$widget->label?></div>
+            <div><?=$widget->label?></div>
         <? endif; ?>
 
-        <a href="#" class="services__item services__item_1"><i></i><?=$widget->dataProvider->models[0]->name?></a>
-        <a href="#" class="services__item services__item_2"><i></i><?=$widget->dataProvider->models[1]->name?></a>
+        <a href="<?=$widget->dataProvider->models[0]->url?>" class="services__item services__item-1"><i></i><?=$widget->dataProvider->models[0]->name?></a>
+        <a href="<?=$widget->dataProvider->models[1]->url?>" class="services__item services__item-2"><i></i><?=$widget->dataProvider->models[1]->name?></a>
     </div>
     <div class="line">
         <?php foreach ($widget->dataProvider->models as $key => $item):?>
         <?php if ($key > 1):?>
-        <a href="#" class="services__item "><i></i><?=$item->name?></a>
+        <a href="<?=$item->url?>" class="services__item services__item-<?=$key +1?>"><i></i><?=$item->name?></a>
         <?php endif;?>
         <?php endforeach;?>
     </div>

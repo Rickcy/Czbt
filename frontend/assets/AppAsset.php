@@ -31,6 +31,7 @@ class AppAsset extends \skeeks\cms\base\AssetBundle
         'css/layerslider/js/layerslider.kreaturamedia.jquery.js',
         'smarty/js/scripts.js',
         'js/app.js',
+        'js/main.js',
 
     ];
     public $depends = [

@@ -24,6 +24,10 @@ time, mark, audio, video, button {
   vertical-align: baseline;
   background: none; }
 
+.ls-bottom-nav-wrapper{
+    display: none;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -361,12 +365,12 @@ body.main-menu-toggle {
   margin-top: 45px; }
   @media only screen and (max-width: 950px) {
     .services {
-      margin-top: 17px; }
+      margin-top: -16px; }
       .services .container {
         padding: 0; }
         .services .container .h__center {
           display: none; } }
-  .services .services-wrapper {
+  .services .services-wrapper div {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
