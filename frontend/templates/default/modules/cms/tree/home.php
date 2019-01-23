@@ -42,12 +42,10 @@
     <div class="container">
         <div class="h__center">Наши клиенты</div>
         <div class="clients-wrapper">
-            <div id="slide" class="slider">
-                <div style="background-image: url('../img/clients/clients_1.jpg');"></div>
-                <div style="background-image: url('../img/clients/clients_2.jpg');"></div>
-                <div style="background-image: url('../img/clients/clients_3.jpg');"></div>
-                <div style="background-image: url('../img/clients/clients_4.jpg');"></div>
-            </div>
+            <?= \skeeks\cms\cmsWidgets\contentElements\ContentElementsCmsWidget::widget([
+                'namespace' => 'ContentElementsCmsWidget-home-partners',
+                'viewFile' 	=> '@app/views/widgets/ContentElementsCmsWidget/partners',
+            ]); ?>
         </div>
     </div>
 </div>
