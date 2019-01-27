@@ -19,10 +19,10 @@
                         г.Барнаул, ул.Полярная, 3в
                     </div>
                     <div class="header-top__phone">
-                        <div>
-                            8 (3852) <span>60 33 55</span><br>
-                            <span>8 800 250 66 93</span>
-                        </div>
+                        <div >
+                            <a style="text-decoration: none" href="tel:8 (3852)603355">  8 (3852) <span>60 33 55</span></a><br>
+                            <a style="text-decoration: none" href="tel:8 (3852)603355"> <span>8 800 250 66 93</span></a>
+                            </div>
                         <div>
                             <span>Звонок по РФ бесплатный</span>
                         </div>
