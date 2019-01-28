@@ -9,30 +9,54 @@
 /* @var $widget \skeeks\cms\cmsWidgets\treeMenu\TreeMenuCmsWidget */
 /* @var $model   \skeeks\cms\models\Tree */
 $hasChildrens = $model->children;
+$hasChildrensContents = count($model->cmsContentElements) > 0;
 $activeClass = '';
 if (strpos(\Yii::$app->request->pathInfo, $model->dir) !== false)
 {
     $activeClass = ' active';
 }
 ?>
-
-<li class="<?= $activeClass; ?>">
+<?php if (in_array($model->dir,['uslugi','about','dokumentaciya'])):?>
     <? if ($hasChildrens) : ?>
-        <a href="<?= $model->url; ?>" title="<?= $model->name; ?>" class="dropdown-toggle">
-            <?= $model->name; ?>
-        </a>
+        <li class="<?= $activeClass; ?>">
+            <a href="<?= $model->url; ?>" title="<?= $model->name; ?>"><?= $model->name; ?></a>
+        </li>
+<li class="<?= $activeClass; ?>">
 
-        <ul>
+
         <? foreach($model->getChildren()
                        ->andWhere(['active' => $widget->active])
                        ->orderBy([$widget->orderBy => $widget->order])
                        ->all() as $childTree) : ?>
-                <li class="children<?= strpos(\Yii::$app->request->pathInfo, $childTree->dir) !== false ? "active" : ""?>">
+
                     <a href="<?= $childTree->url; ?>" title="<?= $childTree->name; ?>"><?= $childTree->name; ?></a>
-                </li>
+
         <? endforeach; ?>
-            </ul>
-    <? else: ?>
-        <a href="<?= $model->url; ?>" title="<?= $model->name; ?>"><?= $model->name; ?></a>
-    <? endif; ?>
+
+
 </li>
+    <? else: ?>
+        <? if ($hasChildrensContents) : ?>
+            <li class="<?= $activeClass; ?>">
+                <a class="has-children"  title="<?= $model->name; ?>"><?= $model->name; ?></a>
+
+            <ul class="childrens">
+                <? foreach($model->getCmsContentElements()
+                               ->andWhere(['active' => $widget->active])
+                               ->orderBy([$widget->orderBy => $widget->order])
+                               ->all() as $childTree) : ?>
+                <li class="children">
+                        <a href="<?= $childTree->url; ?>" title="<?= $childTree->name; ?>"><?= $childTree->name; ?></a>
+                </li>
+                <? endforeach; ?>
+            </ul>
+            </li>
+        <? else: ?>
+            <li class="<?= $activeClass; ?>">
+                <a href="<?= $model->url; ?>" title="<?= $model->name; ?>"><?= $model->name; ?></a>
+            </li>
+        <? endif; ?>
+
+    <? endif; ?>
+
+<?php endif;?>

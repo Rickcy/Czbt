@@ -27,6 +27,85 @@ time, mark, audio, video, button {
 .ls-bottom-nav-wrapper{
     display: none;
 }
+.sub-menu__mobile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  padding: 0;
+  background: #e8eff0;
+  font-weight: bold;
+  visibility: hidden;
+  height: 0;
+}
+@media only screen and (max-width: 950px) {
+  .sub-menu__mobile {
+    visibility: visible;
+    height: auto;
+    padding: 20px 0 10px 0; } }
+.sub-menu__mobile h1 {
+  width: 100%;
+  font-size: 20px !important;
+  color: #004593 !important;
+  text-align: center;
+  padding: 0 0 10px 0 !important;
+  display: block !important; }
+.sub-menu__mobile div {
+  width: 50%;
+  text-align: center;
+  padding: 0 10px 5px 10px;
+  box-sizing: border-box; }
+@media only screen and (max-width: 400px) {
+  .sub-menu__mobile div {
+    width: 100%; } }
+.sub-menu__mobile div a {
+  color: #fff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5389fb+0,28478f+49,28478f+100 */
+  background: #5389fb;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #5389fb 0%, #28478f 49%, #28478f 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #5389fb 0%, #28478f 49%, #28478f 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #5389fb 0%, #28478f 49%, #28478f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5389fb', endColorstr='#28478f',GradientType=0 );
+  /* IE6-9 */
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none; }
+.childrens{
+  display: none;
+}
+.childrens a{
+  font-size: 16px!important;
+}
+.open{
+  display: block;
+}
+.sub-menu__mobile div a:hover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28478f+0,28478f+51,5389fb+100 */
+  background: #28478f;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #28478f 0%, #28478f 51%, #5389fb 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #28478f 0%, #28478f 51%, #5389fb 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #28478f 0%, #28478f 51%, #5389fb 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28478f', endColorstr='#5389fb',GradientType=0 );
+  /* IE6-9 */ }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -715,7 +794,7 @@ body.main-menu-toggle {
     -moz-box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.2); }
     .content-cols__menu nav {
-      margin-right: 120px;
+      margin-right: 160px;
       width: 100%;
     }
     .content-cols__menu ul li {
@@ -758,6 +837,9 @@ body.main-menu-toggle {
         display: -moz-flex;
         display: -ms-flexbox;
         display: flex; }
+@media only screen and (max-width: 950px) {
+  .content-cols__content h1 {
+    display: none; } }
         @media only screen and (max-width: 950px) {
           .content-cols__content-contacts .item_wrap {
             -webkit-flex-wrap: wrap;

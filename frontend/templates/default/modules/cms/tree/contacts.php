@@ -1,7 +1,9 @@
 <?php
 
 ?>
-
+<div class="sub-menu__mobile">
+    <h1><?= $model->name; ?></h1>
+</div>
 <?= $model->description_full; ?>
 
 
