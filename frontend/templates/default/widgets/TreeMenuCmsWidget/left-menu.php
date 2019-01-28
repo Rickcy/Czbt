@@ -13,7 +13,7 @@ $q = $widget->activeQuery->all();
 
 <nav>
 
-<? if ($models = $widget->activeQuery->all()) : ?>
+<? if ($models = $widget->activeQuery->with()->all()) : ?>
 <ul >
     <? foreach ($models as $model) : ?>
 
@@ -25,3 +25,4 @@ $q = $widget->activeQuery->all();
     </ul>
 <? endif; ?>
 </nav>
+

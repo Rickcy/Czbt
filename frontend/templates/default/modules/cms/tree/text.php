@@ -18,13 +18,20 @@
                 'label'          => '',
 //                'treePid'          => $model->id,
                 'level'          => '1',
+                'with'          => ['children','cmsContentElements'],
                 'enabledRunCache'=> \skeeks\cms\components\Cms::BOOL_N,
             ]); ?>
-
 
         </aside>
         <section class="content-cols__content">
             <h1><?= $model->name; ?></h1>
+            <div class="sub-menu__mobile">
+                <h1><?= $model->name; ?></h1>
+                <div><a <?=$model->code != 'about' ?: 'class ="active"'?> href="/about">О компании</a></div>
+                <div><a <?=$model->code != 'uslugi' ?: 'class ="active"'?> href="/uslugi">Сферы услуг</a></div>
+                <div><a <?=$model->code != 'specialisty-kompanii' ?: 'class ="active"'?> href="/about/specialisty-kompanii">Специалисты компании</a></div>
+                <div><a <?=$model->code != 'dokumentaciya' ?: 'class ="active"'?> href="/dokumentaciya">Документация</a></div>
+            </div>
             <?= $model->description_full; ?>
         </section>
     </section>

@@ -13,7 +13,7 @@
     <div class="h__center"><?=$widget->label?></div>
 
 <? endif; ?>
-<div class="news__item-wrap">
+<div class="">
     <? if ($widget->enabledPjaxPagination = \skeeks\cms\components\Cms::BOOL_Y) : ?>
         <? \skeeks\cms\modules\admin\widgets\Pjax::begin(); ?>
     <? endif; ?>
@@ -24,9 +24,10 @@
         'emptyText'          => '',
         'options'           =>
             [
+
             ],
         'itemOptions' => [
-//                    'class'     => 'col-lg-3 col-md-3 col-sm-6',
+                    'class'     => 'news__item-wrap',
 //                    'tag'       => 'div',
         ],
                 'layout'            => "\n{items}\n<p class=\"row\">{pager}</p>"

@@ -24,6 +24,7 @@
         <?= \skeeks\cms\cmsWidgets\contentElements\ContentElementsCmsWidget::widget([
             'namespace' => 'ContentElementsCmsWidget-home',
             'viewFile' 	=> '@app/views/widgets/ContentElementsCmsWidget/publications',
+            'label' => 'Услуги'
         ]); ?>
 
     </div>
@@ -33,6 +34,7 @@
         <?= \skeeks\cms\cmsWidgets\contentElements\ContentElementsCmsWidget::widget([
             'namespace' => 'ContentElementsCmsWidget-home-news',
             'viewFile' 	=> '@app/views/widgets/ContentElementsCmsWidget/news',
+            'label' => 'Новости'
         ]); ?>
 
 
@@ -45,6 +47,7 @@
             <?= \skeeks\cms\cmsWidgets\contentElements\ContentElementsCmsWidget::widget([
                 'namespace' => 'ContentElementsCmsWidget-home-partners',
                 'viewFile' 	=> '@app/views/widgets/ContentElementsCmsWidget/partners',
+
             ]); ?>
         </div>
     </div>
