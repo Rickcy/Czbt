@@ -91,6 +91,9 @@ time, mark, audio, video, button {
 .childrens a{
   font-size: 16px!important;
 }
+.has-children:hover{
+    cursor: pointer!important;
+ }
 .open{
   display: block;
 }
