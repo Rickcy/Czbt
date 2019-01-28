@@ -9,25 +9,28 @@
 /* @var $widget \skeeks\cms\cmsWidgets\treeMenu\TreeMenuCmsWidget */
 /* @var $model   \skeeks\cms\models\CmsContentElement */
 $hasChildrens = count($model->childrenContentElements) > 0;
+$hasParent = $model->parentContentElement ? $model->parentContentElement->id : false;
+
 $activeClass = '';
 if (strpos(\Yii::$app->request->pathInfo, $model->code) !== false)
 {
     $activeClass = ' active';
 }
 ?>
-
+<?php if(!$model->parent_content_element_id):?>
 <li class="<?= $activeClass; ?>">
+
     <? if ($hasChildrens) : ?>
-        <a href="<?= $model->url; ?>" title="<?= $model->name; ?>" class="dropdown-toggle">
+        <a  title="<?= $model->name; ?>" class="has-children">
             <?= $model->name; ?>
         </a>
 
-        <ul>
+        <ul class="childrens">
             <? foreach($model->getChildrenContentElements()
                            ->andWhere(['active' => $widget->active])
                            ->orderBy([$widget->orderBy => $widget->order])
                            ->all() as $childTree) : ?>
-                <li class="children<?= strpos(\Yii::$app->request->pathInfo, $childTree->dir) !== false ? "active" : ""?>">
+                <li class="children">
                     <a href="<?= $childTree->url; ?>" title="<?= $childTree->name; ?>"><?= $childTree->name; ?></a>
                 </li>
             <? endforeach; ?>
@@ -36,3 +39,4 @@ if (strpos(\Yii::$app->request->pathInfo, $model->code) !== false)
         <a href="<?= $model->url; ?>" title="<?= $model->name; ?>"><?= $model->name; ?></a>
     <? endif; ?>
 </li>
+<?php endif;?>
