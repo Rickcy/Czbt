@@ -7,6 +7,14 @@
  */
 /* @var $this   yii\web\View */
 /* @var $widget \skeeks\cms\cmsWidgets\contentElements\ContentElementsCmsWidget */
+
+$models = [];
+foreach ($widget->dataProvider->models as $key =>$item){
+    if(!$item->parent_content_element_id){
+        $models[] = $item;
+    }
+}
+$widget->dataProvider->setModels($models);
 ?>
 
 <? if ($widget->label) : ?>
