@@ -9,25 +9,21 @@
 /* @var \skeeks\cms\models\CmsContentElement $model */
 ?>
 
-
-
-<!--=== Content Part ===-->
-<section class="slice bg-white bb">
-        <div class="wp-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <?= $model->description_full; ?>
-
-                        <?/*= \skeeks\cms\cmsWidgets\treeMenu\TreeMenuCmsWidget::widget([
-                            'namespace'         => 'TreeMenuCmsWidget-sub-catalog',
-                            'viewFile'          => '@template/widgets/TreeMenuCmsWidget/sub-catalog',
-                            'treePid'           => $model->id,
-                            'enabledRunCache'   => \skeeks\cms\components\Cms::BOOL_N,
-                        ]); */?>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
+<div class="container">
+    <section class="content-cols">
+        <aside class="content-cols__menu">
+            <?= \skeeks\cms\cmsWidgets\treeMenu\TreeMenuCmsWidget::widget([
+                'namespace'      => 'menu-left',
+                'viewFile'       => '@app/views/widgets/TreeMenuCmsWidget/left-menu-services.php',
+                'tree_type_ids'          => [$model->tree_id],
+                'level'          => '1',
+                'with'          => ['cmsContentElements'],
+                'enabledRunCache'=> \skeeks\cms\components\Cms::BOOL_N,
+            ]); ?>
+        </aside>
+        <section class="content-cols__content">
+            <h1><?= $model->name; ?></h1>
+            <?= $model->description_full; ?>
+        </section>
+    </section>
+</div>
