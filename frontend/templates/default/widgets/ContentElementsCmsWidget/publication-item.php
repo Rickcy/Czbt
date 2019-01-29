@@ -9,6 +9,5 @@
  *
  */
 ?>
-<?php if(!$model->parent_content_element_id):?>
 <a href="<?= $model->url; ?>" title="<?= $model->name; ?>" class="services__item" style="background: url('<?= !$model->image ?: $model->image->src; ?>') no-repeat; "></a>
-<?php endif;?>
+
