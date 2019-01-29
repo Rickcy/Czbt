@@ -817,8 +817,12 @@ body.main-menu-toggle {
           color: #575757!important;
           text-decoration: underline;
         }
-        .content-cols__menu ul li a.active, .content-cols__menu ul li ul li a:hover, .content-cols__menu ul li a:hover {
-          color: #ff0000!important; }
+        .content-cols__menu ul li.active a, .content-cols__menu ul li ul li a:hover, .content-cols__menu ul li a:hover {
+          color: #ff0000!important;
+        }
+        .content-cols__menu ul li ul.active{
+          display: block;!important;
+          }
     @media only screen and (max-width: 950px) {
       .content-cols__menu {
         display: none; } }
