@@ -22,11 +22,8 @@
         ]); ?>
         </aside>
         <section class="content-cols__content">
-            <h1><?= $model->description_full; ?></h1>
-            <?= \skeeks\cms\cmsWidgets\contentElements\ContentElementsCmsWidget::widget([
-                'namespace' => 'ContentElementsCmsWidget-services',
-                'viewFile' 	=> '@app/views/widgets/ContentElementsCmsWidget/services',
-            ]); ?>
+            <h1><?= $model->name; ?></h1>
+            <?= $model->description_full; ?>
         </section>
     </section>
 </div>
