@@ -18,7 +18,7 @@ if (strpos(\Yii::$app->request->pathInfo, $model->dir) !== false)
 ?>
 <?php if (in_array($model->dir,['sfera-uslug','about','dokumentaciya'])):?>
     <? if ($hasChildrens) : ?>
-        <li class="<?= $activeClass; ?>">
+        <li class="">
             <a href="<?= $model->url; ?>" title="<?= $model->name; ?>"><?= $model->name; ?></a>
         </li>
 
@@ -28,7 +28,7 @@ if (strpos(\Yii::$app->request->pathInfo, $model->dir) !== false)
                        ->andWhere(['active' => $widget->active])
                        ->orderBy([$widget->orderBy => $widget->order])
                        ->all() as $childTree) : ?>
-            <li class="<?= $activeClass; ?>">
+            <li class="<?= strpos(\Yii::$app->request->pathInfo, $childTree->dir) === false ?: 'active' ?>">
                     <a href="<?= $childTree->url; ?>" title="<?= $childTree->name; ?>"><?= $childTree->name; ?></a>
 
             </li>
@@ -37,7 +37,7 @@ if (strpos(\Yii::$app->request->pathInfo, $model->dir) !== false)
 
     <? else: ?>
 
-            <li class="<?= $activeClass; ?>">
+            <li class="<?= strpos(\Yii::$app->request->pathInfo, $model->dir) === false ?: 'active' ?>">
                 <a href="<?= $model->url; ?>" title="<?= $model->name; ?>"><?= $model->name; ?></a>
             </li>
 

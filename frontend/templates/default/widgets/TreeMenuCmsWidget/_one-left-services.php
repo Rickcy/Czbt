@@ -25,12 +25,19 @@ if (strpos(\Yii::$app->request->pathInfo, $model->code) !== false)
             <?= $model->name; ?>
         </a>
 
-        <ul class="childrens">
+        <ul class="childrens
+        <?php
+        foreach ($model->childrenContentElements as $element){
+            if(strpos(\Yii::$app->request->pathInfo, $element->code) !== false){
+                echo 'active';
+            }
+        }
+        ?>">
             <? foreach($model->getChildrenContentElements()
                            ->andWhere(['active' => $widget->active])
                            ->orderBy([$widget->orderBy => $widget->order])
                            ->all() as $childTree) : ?>
-                <li class="children">
+                <li class="children <?=strpos(\Yii::$app->request->pathInfo, $childTree->code) == false ?: 'active' ?>">
                     <a href="<?= $childTree->url; ?>" title="<?= $childTree->name; ?>"><?= $childTree->name; ?></a>
                 </li>
             <? endforeach; ?>
