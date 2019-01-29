@@ -10,6 +10,7 @@
 /* @var $models  \skeeks\cms\models\Tree[] */
 /* @var $model  \skeeks\cms\models\Tree */
 
+
 ?>
 
 <nav>
@@ -17,7 +18,8 @@
     <? if ($models = $widget->activeQuery->all()) : ?>
         <ul >
             <? foreach ($models as $model) : ?>
-                <?php foreach ($model->cmsContentElements as $element):?>
+                <?php foreach ($model->getCmsContentElements()->orderBy(['priority'=> SORT_ASC])->all() as $element):?>
+
                 <?= $this->render("_one-left-services", [
                     "widget"        => $widget,
                     "model"         => $element,
