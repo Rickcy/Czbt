@@ -675,7 +675,7 @@ body.main-menu-toggle {
       right: 0; }
 
 .feedback {
-  background: #9ebafc;
+  background-image: url("../img/feedback_bg.jpg");
   padding: 30px 0 0 0; }
   .feedback .h__center {
     color: #fff; }
