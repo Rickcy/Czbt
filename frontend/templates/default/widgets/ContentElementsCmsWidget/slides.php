@@ -51,7 +51,7 @@ JS
             'options'           =>
             [
                 'tag'       => 'div',
-                'style' => "width: 100%; height: 670px",
+                'style' => "width: 100%; height: 650px",
                 'id' => "layerslider"
             ],
             'itemOptions' => [

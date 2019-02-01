@@ -24,7 +24,7 @@
 
         </aside>
         <section class="content-cols__content">
-            <h1><?= $model->name; ?></h1>
+            <h1 style="margin-left: 20px"><?= $model->name; ?></h1>
             <div class="sub-menu__mobile">
                 <h1><?= $model->name; ?></h1>
                 <div><a <?=$model->code != 'about' ?: 'class ="active"'?> href="/about">О компании</a></div>

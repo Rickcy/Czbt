@@ -12,7 +12,7 @@
 <? if ($model->image) : ?>
     <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
         <!-- slide background -->
-        <img src="<?= $model->image->src; ?>" class="ls-bg" style="width: 100%;"  alt="Slide background"/>
+        <img src="<?= $model->image->src; ?>" class="ls-bg" style="width: 100%;height: 670px"  alt="Slide background"/>
 
         <div class=" ls-l " style="width:auto; top:30px; left:0;   position:absolute;     "
             data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1000;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
