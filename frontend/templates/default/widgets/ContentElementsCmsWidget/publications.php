@@ -18,7 +18,7 @@ $widget->dataProvider->setModels($models);
 ?>
 
 <? if ($widget->label) : ?>
-    <div class="h__center"><a class="h__center" href="<?=\yii\helpers\Inflector::slug($widget->label,'-')?>"><?=$widget->label?></a></div>
+    <div class="h__center"><a class="h__center" href="/uslugi"><?=$widget->label?></a></div>
 
 <? endif; ?>
 <div class="services-wrapper">
@@ -48,7 +48,7 @@ $widget->dataProvider->setModels($models);
 <div class="services-wrapper__sm">
     <div class="line">
         <? if ($widget->label) : ?>
-            <div><?=$widget->label?></div>
+            <div><a class="h__center" href="/uslugi"><?=$widget->label?></a></div>
         <? endif; ?>
 
         <a href="<?=$widget->dataProvider->models[0]->url?>" class="services__item services__item-1"><i></i><?=$widget->dataProvider->models[0]->name?></a>
