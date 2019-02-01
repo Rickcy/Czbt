@@ -293,6 +293,9 @@ body.main-menu-toggle {
   height: 97px;
   line-height: 30px;
   font-weight: bold; }
+.header-top a {
+  color: #28478f;
+}
   .header-middle__logo:before {
     content: '';
     width: 135px;
@@ -336,7 +339,7 @@ body.main-menu-toggle {
   background: -webkit-linear-gradient(top, #248aff 0%, #004593 100%);
   background: linear-gradient(to bottom, #248aff 0%, #004593 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#248aff', endColorstr='#004593',GradientType=0 );
-  margin-top: 50px; }
+  margin-top: 39px; }
   @media only screen and (max-width: 950px) {
     .header-bottom {
       margin-top: 0; } }
