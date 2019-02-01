@@ -38,7 +38,7 @@
 </div>
 <? if ($widget->label) : ?>
 
-    <div class="news__showmore"><a href="<?=\yii\helpers\Inflector::slug($widget->label,'-')?>">Посмотреть все</a></div>
+    <div class="news__showmore"><a href="/uslugi">Посмотреть все</a></div>
 <? endif; ?>
 
 

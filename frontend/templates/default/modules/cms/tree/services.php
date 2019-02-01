@@ -17,6 +17,7 @@
             'viewFile'       => '@app/views/widgets/TreeMenuCmsWidget/left-menu-services.php',
                 'tree_type_ids'          => [$model->id],
             'level'          => '1',
+            'order'          => SORT_DESC,
             'with'          => ['cmsContentElements'],
             'enabledRunCache'=> \skeeks\cms\components\Cms::BOOL_N,
         ]); ?>
