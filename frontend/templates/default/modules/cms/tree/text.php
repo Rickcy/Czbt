@@ -29,7 +29,7 @@
                 <h1><?= $model->name; ?></h1>
                 <div><a <?=$model->code == 'about' ? 'class ="active"': ''?> href="/about">О компании</a></div>
                 <div><a <?=$model->code == 'sfera-uslug' ? 'class ="active"' : ''?> href="/about/sfera-uslug">Сферы услуг</a></div>
-                <div><a <?=$model->code == 'specialisty-kompanii' ? 'class ="active"' : ''?> href="/about/specialisty-kompanii">Специалисты компании</a></div>
+                <div><a <?=$model->code == 'specialisty-kompanii' ? 'class ="active"' : ''?> href="/about/specialista-kompanii">Специалисты компании</a></div>
                 <div><a <?=$model->code == 'dokumentaciya' ? 'class ="active"' : ''?> href="/dokumentaciya">Документация</a></div>
             </div>
             <?php if($model->code == 'sfera-uslug'):?>
