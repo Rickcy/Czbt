@@ -246,6 +246,7 @@ body.main-menu-toggle {
     width: 290px;
     height: 65px;
     line-height: 65px;
+    font-weight: 600;
     cursor: pointer;
     display: block;
     text-align: center;
