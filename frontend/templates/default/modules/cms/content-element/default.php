@@ -24,7 +24,7 @@
         <section class="content-cols__content">
             <div class="sub-menu__mobile">
                 <h1>Услуги</h1>
-                <div><a class="active" <?=$model->code == '11-obuchenie-i-perepodgotovka-sotrudnikov' ? 'class ="active"' : ''?>  href="/uslugi/11-obuchenie-i-perepodgotovka-sotrudnikov">Обучение и переподготовка сотрудников</a></div>
+                <div><a  <?=$model->code == '11-obuchenie-i-perepodgotovka-sotrudnikov' ? 'class ="active"' : ''?>  href="/uslugi/11-obuchenie-i-perepodgotovka-sotrudnikov">Обучение и переподготовка сотрудников</a></div>
                 <div><a <?=$model->code == '10-specialnaya-ocenka-uslovij-truda-sout' ? 'class ="active"' : ''?> href="/uslugi/10-specialnaya-ocenka-uslovij-truda-sout">Специальная оценка условий труда (СОУТ)</a></div>
                 <div><a <?=$model->code == '9-protezirovanie-zubov' ?'class ="active"': ''?> href="/uslugi/9-protezirovanie-zubov">Производственный контроль</a></div>
                 <div><a <?=$model->code == '19-autsorsing-i-audit' ?'class ="active"':'' ?> href="/uslugi/19-autsorsing-i-audit">Аутсорсинг и Аудит</a></div>
