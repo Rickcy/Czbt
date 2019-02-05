@@ -48,7 +48,7 @@ $widget->dataProvider->setModels($models);
 <div class="services-wrapper__sm">
     <div class="line">
         <? if ($widget->label) : ?>
-            <div><a class="h__center" href="/uslugi"><?=$widget->label?></a></div>
+            <div><?=$widget->label?></div>
         <? endif; ?>
 
         <a href="<?=$widget->dataProvider->models[0]->url?>" class="services__item services__item-1"><i></i><?=$widget->dataProvider->models[0]->name?></a>
