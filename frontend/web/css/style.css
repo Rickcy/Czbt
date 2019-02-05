@@ -1252,7 +1252,6 @@ footer {
   font-weight: bold;
   font-size: 20px; }
   .h__blue:before {
-    background: url("../img/icons/services_1_icon.png") center no-repeat;
     background-size: contain;
     content: '';
     width: 60px;
@@ -1260,6 +1259,26 @@ footer {
     display: inline-block;
     vertical-align: middle;
     margin-right: 15px; }
+.h__blue-1:before {
+    background: url("../img/icons/services_1_icon.png") center no-repeat;
+
+}
+.h__blue-2:before {
+    background: url("../img/icons/services_2_icon.png") center no-repeat;
+
+}
+.h__blue-3:before {
+    background: url("../img/icons/services_3_icon.png") center no-repeat;
+
+}
+.h__blue-4:before {
+    background: url("../img/icons/services_4_icon.png") center no-repeat;
+}
+@media only screen and (max-width: 950px) {
+    .h__blue a {
+        font-size: 11px!important;
+    }
+}
 
 .content-cols__content {
   color: #4e4e4e;
