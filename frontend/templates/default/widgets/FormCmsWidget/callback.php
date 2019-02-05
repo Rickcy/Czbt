@@ -45,7 +45,7 @@ JS
         <?= $property->renderActiveForm($form, $modelHasRelatedProperties)->input('text',['class' =>$property->code,'placeholder' => $property->name])->label(false); ?>
     <? endforeach; ?>
 <? endif; ?>
-<div class="button"><?= \yii\helpers\Html::submitButton("" . \Yii::t('skeeks/form2/app', $widget->btnSubmit), [
+<div class="button"><?= \yii\helpers\Html::submitButton("Оставить заявку", [
         'class' => '',
     ]); ?>
 </div>

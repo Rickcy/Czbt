@@ -97,6 +97,15 @@ time, mark, audio, video, button {
 .open{
   display: block;
 }
+.sub-menu__mobile div a.active{
+  background: #ff0000;
+  background: -moz-linear-gradient(top, #ff0000 0%, #c9182c 51%, #ff1d13 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ff0000 0%, #c9182c 51%, #ff1d13 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ff0000 0%, #c9182c 51%, #ff1d13 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28478f', endColorstr='#5389fb',GradientType=0 );
+}
 .sub-menu__mobile div a:hover {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28478f+0,28478f+51,5389fb+100 */
   background: #28478f;
@@ -892,7 +901,7 @@ body.main-menu-toggle {
         margin-bottom: 50px;
         padding: 40px;
         border-radius: 50px 0 50px 0;
-        font-size: 22px;
+        font-size: 18px;
         line-height: 36px; }
         .content-cols__content-contacts .item.item_font30 {
           font-size: 30px; }

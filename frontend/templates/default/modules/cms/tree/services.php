@@ -23,7 +23,15 @@
         ]); ?>
         </aside>
         <section class="content-cols__content">
-            <h1><?= $model->name; ?></h1>
+            <h1 style="margin-left: 20px"><?= $model->name; ?></h1>
+            <div class="sub-menu__mobile">
+                <h1><?= $model->name; ?></h1>
+                <div><a   href="/uslugi/11-obuchenie-i-perepodgotovka-sotrudnikov">Обучение и переподготовка сотрудников</a></div>
+                <div><a  href="/uslugi/10-specialnaya-ocenka-uslovij-truda-sout">Специальная оценка условий труда (СОУТ)</a></div>
+                <div><a  href="/uslugi/9-protezirovanie-zubov">Производственный контроль</a></div>
+                <div><a  href="/uslugi/19-autsorsing-i-audit">Аутсорсинг и Аудит</a></div>
+                <div><a  href="/uslugi/19-autsorsing-i-audit">Нормативные документы</a></div>
+            </div>
             <?= $model->description_full; ?>
         </section>
     </section>

@@ -35,7 +35,7 @@ if (strpos(\Yii::$app->request->pathInfo, $model->code) !== false)
         ?>">
             <? foreach($model->getChildrenContentElements()
                            ->andWhere(['active' => $widget->active])
-                           ->orderBy([$widget->orderBy => $widget->order])
+                           ->orderBy([$widget->orderBy => SORT_DESC])
                            ->all() as $childTree) : ?>
                 <li class="children <?=strpos(\Yii::$app->request->pathInfo, $childTree->code) == false ?: 'active' ?>">
                     <a href="<?= $childTree->url; ?>" title="<?= $childTree->name; ?>"><?= $childTree->name; ?></a>

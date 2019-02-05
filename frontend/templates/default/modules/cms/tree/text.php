@@ -28,10 +28,18 @@
             <div class="sub-menu__mobile">
                 <h1><?= $model->name; ?></h1>
                 <div><a <?=$model->code != 'about' ?: 'class ="active"'?> href="/about">О компании</a></div>
-                <div><a <?=$model->code != 'uslugi' ?: 'class ="active"'?> href="/uslugi">Сферы услуг</a></div>
+                <div><a <?=$model->code != 'sfera-uslug' ?: 'class ="active"'?> href="/about/sfera-uslug">Сферы услуг</a></div>
                 <div><a <?=$model->code != 'specialisty-kompanii' ?: 'class ="active"'?> href="/about/specialisty-kompanii">Специалисты компании</a></div>
                 <div><a <?=$model->code != 'dokumentaciya' ?: 'class ="active"'?> href="/dokumentaciya">Документация</a></div>
             </div>
+            <?php if($model->code == 'sfera-uslug'):?>
+            <div class="sub-menu__mobile" style="background: inherit;padding-top: 0px">
+                <div><a style="background: inherit;color: #0e0e0e;border: 1px #ceb9b9 solid;"   href="/uslugi/11-obuchenie-i-perepodgotovka-sotrudnikov">Обучение и переподготовка сотрудников</a></div>
+                <div><a style="background: inherit;color: #0e0e0e;border: 1px #ceb9b9 solid;"  href="/uslugi/10-specialnaya-ocenka-uslovij-truda-sout">Специальная оценка условий труда (СОУТ)</a></div>
+                <div><a style="background: inherit;color: #0e0e0e;border: 1px #ceb9b9 solid;"  href="/uslugi/9-protezirovanie-zubov">Производственный контроль</a></div>
+                <div><a style="background: inherit;color: #0e0e0e;border: 1px #ceb9b9 solid;"  href="/uslugi/19-autsorsing-i-audit">Аутсорсинг и Аудит</a></div>
+            </div>
+            <?php endif;?>
             <?= $model->description_full; ?>
         </section>
     </section>
